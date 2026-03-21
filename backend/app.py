@@ -39,13 +39,13 @@ class AlertMetrics(BaseModel):
 
 # Response model for the predict endpoint
 class PredictionResponse(BaseModel):
-    prediction: Literal["Normal", "Underutilized", "Overutilized"]
+    prediction: str
     confidence: float
 
 # Response model for the alert prediction endpoint
 class AlertPredictionResponse(BaseModel):
     prediction: int
-    status: Literal["Normal", "Anomaly"]
+    status: str
     confidence: float
 
 # Load ML model and label encoder on startup
